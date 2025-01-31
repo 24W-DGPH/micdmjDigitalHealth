@@ -7,7 +7,7 @@ library(rsconnect)
 # my_shiny_app online connect
 #rsconnect::deployApp('C:\Users\micdm\Documents\GPH\Digital Health\myShinyApp')
 
-# Loading my_dataset
+# Loading my_dataset in _excel
 data <- read_excel("Fertility_Nigeria.xlsx", sheet = "Fertility_Nigeria")
 
 # cleaning my_dataset
