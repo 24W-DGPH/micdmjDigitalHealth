@@ -12,9 +12,9 @@ data <- read_excel("Fertility_Nigeria.xlsx", sheet = "Fertility_Nigeria")
 
 # cleaning my_dataset
 data <- data %>%
-  filter(!is.na(Location) & !is.na('sample size')) %>% #remove missing values
+  filter(!is.na(Location) & !is.na('sample size')) %>% #removing missing and NA values
   distinct() %>% #remove duplicates
-  mutate(Location = trimws(Location)) %>% #remove white spaces in location names
+  mutate(Location = trimws(Location)) %>% #to remove white spaces in location names
   filter('sample size' > 0) #remove invalid sample size
 
 # setting parameters for my_shiny_app GUI
